@@ -48,7 +48,7 @@ window.addEventListener("resize", () => {
 // As the user scrolls, the active link should change based on the section currently displayed on the screen.
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll(
-    "#heroHeader, #services, #works, #contact"
+    "#heroHeader, #aboutus, #services, #works, #contact"
   );
 
   // Loop through sections and check if they are visible
@@ -95,11 +95,12 @@ NAV_LINKS.forEach((link) => {
     link.blur();
   });
 });
-// Changer de thème
+
+//changer de theme
 
 const ball = document.querySelector(".toggle-container");
 const items = document.querySelectorAll(
-  ".toggle,.nav-container,.recommended-movie-title,.recommended-movie-container"
+  ".toggle,.nav-container,.section container"
 );
 ball.addEventListener("click", () => {
   items.forEach((item) => {
@@ -145,33 +146,3 @@ new SweetScroll({
   easing: "easeOutQuint",
   offset: NAV_BAR.getBoundingClientRect().height - 80,
 });
-
-// notre équipe
-let menuIcon = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
-
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
-
-window.onscroll = () => {
-  sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
-
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach((links) => {
-        links.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
-      });
-    }
-  });
-};
-
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-};

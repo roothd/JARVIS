@@ -305,6 +305,7 @@ body {
  */
 
 /* changer de thème */
+
 .nav-container.active {
   color: var(--bg-color);
   background-color: white;

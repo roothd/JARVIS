@@ -95,6 +95,18 @@ NAV_LINKS.forEach((link) => {
     link.blur();
   });
 });
+// Changer de thème
+
+const ball = document.querySelector(".toggle-container");
+const items = document.querySelectorAll(
+  ".toggle,.nav-container,.recommended-movie-title,.recommended-movie-container"
+);
+ball.addEventListener("click", () => {
+  items.forEach((item) => {
+    item.classList.toggle("active");
+  });
+  ball.classList.toggle("active");
+});
 
 // Handles the hover animation on services section
 SERVICE_BOXES.forEach((service) => {

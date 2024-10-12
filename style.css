@@ -142,7 +142,7 @@ table {
   box-sizing: inherit;
 }
 :root {
-  --bg-color: #000000;
+  --bg-color: #111111;
   --second-color: #00ff94;
   --text-color: #fff;
   --main-color: #59ffb9;
@@ -320,7 +320,7 @@ body {
 .toggle {
   width: 40px;
   height: 20px;
-  background-color: var(--bg-color);
+  background-color: black;
   border-radius: 30px;
   display: flex;
   justify-content: space-around;
@@ -328,7 +328,7 @@ body {
   position: relative;
 }
 .toggle.active {
-  background-color: black;
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
@@ -347,7 +347,7 @@ body {
 .toggle-container {
   width: 20px;
   height: 20px;
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
   position: absolute;
   right: 1px;
   border-radius: 50%;
